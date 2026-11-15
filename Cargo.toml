@@ -1,0 +1,25 @@
+[package]
+name = "space-sweep"
+version = "0.1.0"
+edition = "2021"
+description = "Find what is filling the C: drive, label it, and delete the chosen items in one click"
+
+[dependencies]
+eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow"] }
+rayon = "1.10"
+windows-sys = { version = "0.59", features = [
+    "Win32_Foundation",
+    "Win32_Storage_FileSystem",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_Threading",
+    "Win32_System_Registry",
+    "Win32_System_Diagnostics_ToolHelp",
+] }
+
+[profile.release]
+opt-level = 3
+debug = false
+incremental = false
+strip = true
+codegen-units = 16
