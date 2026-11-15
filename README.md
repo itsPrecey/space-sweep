@@ -58,3 +58,7 @@ Installer (needs [Inno Setup 6](https://jrsoftware.org/isinfo.php)): `powershell
 `assets/logo.svg` is the mark traced with LineMorph from the design clip (`assets/logo-source.png`, background flattened to black): `linemorph trace logo-source.png --smoothing 3 --tolerance 0.4 --min-region 4 --min-area 1` scores 95.9% against the source. `python assets/make_icons.py <linemorph.exe>` puts it on a dark rounded tile (`icon.svg`) and renders `icon.ico` (16 to 256 px), `icon-256.png` and the window icon. `build.rs` embeds the icon and version info into the exe with the Windows SDK's `rc.exe`.
 
 Flags: `--report out.tsv` writes a headless scan to a file; `--no-wsl` skips the Linux scan; `--screenshot out.bmp` captures the window after the scan and exits.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

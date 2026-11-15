@@ -3,6 +3,8 @@ name = "space-sweep"
 version = "0.1.0"
 edition = "2021"
 description = "Find what is filling the C: drive, label it, and delete the chosen items in one click"
+license = "MIT"
+repository = "https://github.com/itsPrecey/space-sweep"
 
 [dependencies]
 eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow"] }
